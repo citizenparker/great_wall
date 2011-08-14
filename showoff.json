@@ -1,0 +1,9 @@
+{
+  "name": "Building the Great Wall: API Driven Architecture",
+  "description": "Some text goes here",
+  "sections": [
+    {"section":"intro"},
+    {"section":"why"},
+    {"section":"how"}
+  ]
+}
