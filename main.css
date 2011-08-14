@@ -1,0 +1,19 @@
+body {
+  font-family: 'Arvo', 'Gill Sans', Helvetica, Arial, sans-serif;  
+}
+
+.subsection {
+background-image: -webkit-gradient(
+    linear,
+    left bottom,
+    left top,
+    color-stop(0, rgb(19,145,0)),
+    color-stop(0.5, rgb(10,163,33))
+);
+background-image: -moz-linear-gradient(
+    center bottom,
+    rgb(19,145,0) 0%,
+    rgb(10,163,33) 50%
+);
+
+}
