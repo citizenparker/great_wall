@@ -22,7 +22,7 @@
 # Small Problems #
 
 * Model growth
-* Repetetive sinatra wiring
+* Repetitive Sinatra wiring
 
 <!SLIDE>
 
@@ -48,12 +48,19 @@
 <!SLIDE subsection>
 # The Client #
 
-<!SLIDE>
+<!SLIDE center>
 # Many Ways to do this #
-//TODO graphic of logos w/ jQuery, Knockout, SproutCore, Backbone, etc.
-<!SLIDE>
+
+![tbd](../images/all_frameworks.jpg)
+
+## ...
+
+<!SLIDE center>
 # Our Ways to do this #
-//Graphic of above with all but SproutCore and Backbone grayed out
+![tbd](../images/our_frameworks.jpg)
+
+## ...
+
 <!SLIDE>
 # Key Concepts #
 Request / Response vs Run Loop
@@ -94,7 +101,3 @@ graphic of architecture
 <!SLIDE>
 
 # Pros & Cons #
-
-<!SLIDE>
-
-# SUMMATION? #

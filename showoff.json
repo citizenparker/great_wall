@@ -1,9 +1,10 @@
 {
   "name": "Building the Great Wall: API Driven Architecture",
-  "description": "Some text goes here",
+  "description": "Dan Melnick and Scott Parker present their views on building API driven applications. Includes how, why, and why not.",
   "sections": [
     {"section":"intro"},
     {"section":"why"},
-    {"section":"how"}
+    {"section":"how"},
+	{"section":"finale"}
   ]
 }
