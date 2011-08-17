@@ -17,7 +17,7 @@
   		Todo.all.to_json
 	end
 
-<!SLIDE >
+<!SLIDE bullets incremental>
 
 # Small Problems #
 
@@ -30,20 +30,21 @@
 
 	@@@ruby
 	resource TimeOff, :base => '/timeoff' do
-		default_actions :create, :retrieve, :query, :update, :delete
+		default_actions :create, :retrieve, 
+			:query, :update, :delete
 
 	end
 
-<!SLIDE>
+<!SLIDE bullets incremental>
 # Medium Problems #
-* Different representations of models, more granular control
-* More model information that remains serverside
-* Performance / Scalability concerns
+* Different representations of the same model
+* Growing model information that remains server-side
+* Performance / scalability concerns
 
-<!SLIDE>
+<!SLIDE bullets incremental>
 # Large #
-* Solutions may vary / TBD
-* Presenters vs JSON views (read that Mojo? blog)
+* Presenters
+* JSON views ([RABL](https://github.com/nesquena/rabl), for instance)
 
 <!SLIDE subsection>
 # The Client #
@@ -62,16 +63,23 @@
 ## ...
 
 <!SLIDE>
-# Key Concepts #
-Request / Response vs Run Loop
-Bi directional communication
+# Clientside MVC Is Different! #
+
+<!SLIDE center>
+![server](../images/server_mvc.png)
+
+## Server-side MVC
+
+<!SLIDE center>
+![server](../images/client_mvc.png)
+
+## Client-side MVC
+
+<!SLIDE center>
+# SproutCore in Three Acts#
+![sc](../images/sproutcore.png)
 
 <!SLIDE >
-# SproutCore #
- graphic on key architecture
-
-<!SLIDE >
-
 # Samples #
 // Three-ish samples
 // sample of Views
@@ -83,11 +91,11 @@ Bi directional communication
 
 # Pros & Cons
 
-<!SLIDE>
+<!SLIDE center>
 
-# Backbone #
+# Backbone in Three Acts #
 
-graphic of architecture
+![sc](../images/backbone.png)
 
 <!SLIDE >
 
