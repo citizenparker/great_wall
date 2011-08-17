@@ -22,3 +22,7 @@ background-image: -moz-linear-gradient(
 .bullets ul li {
   font-size: 0.7em;
 }
+
+span.highlight {
+  color: red;
+}

@@ -1,7 +1,7 @@
 <!SLIDE bullets>
 
 # Problems #
-* Different consumers
+* <span class="highlight">Different consumers</span>
 
 <!SLIDE center>
 
@@ -11,7 +11,7 @@
 
 # Problems #
 * Different consumers
-* Richer experiences
+* <span class="highlight">Richer experiences</span>
 
 <!SLIDE bullets incremental>
 
@@ -26,7 +26,13 @@
 # Problems #
 * Different consumers
 * Richer experiences
-* Expansive codebases
+* <span class="highlight">Expansive codebases</span>
+
+<!SLIDE bullets>
+
+# Expansive codebases #
+
+* How does this architecture make our lives easier as we scale?
 
 <!SLIDE subsection>
 
@@ -37,6 +43,12 @@
 
 * Structuring complexity more intuitive when everything is already an API or service
 * Transitions between architectures are cheaper when you're oriented towards separation of concerns
+
+<!SLIDE bullets>
+# Scale of Complexity #
+
+* Isolate parts of your app that are likely to change
+* UI and user facing components are more volatile
 
 <!SLIDE bullets>
 # Scale of Performance #
@@ -50,7 +62,7 @@
 <!SLIDE bullets>
 # Scale of Performance
 
-* With discipline to keep your API silos isolated, you can scale horizontally with ease
+* If you're disciplined in keeping your API silos isoalted, you can scale horizontally with ease
 
 <!SLIDE center>
 
@@ -64,20 +76,19 @@
 * Leaner slices and mental models = faster ramp-up time
 * Separation of organizational concerns = easier team splits
 
-<!SLIDE>
+<!SLIDE bullets>
 
 # Additional Considerations #
 
-Think about how not only client consumes API, but how API endpoints interact w/ one another
+* Client consumes API, but API endpoints may also need to interact
+* Psychology of the architecture is different as a developer
 
-<!SLIDE>
+<!SLIDE bullets>
 # Additional Considerations #
-// Remaining decoupled while still useful
+* Do we need MVC on "both sides" of the wall?
 
-<!SLIDE>
+<!SLIDE bullets>
 # Additional Considerations #
-// Do we need MVC on "both sides" of the wall?
-
-<!SLIDE>
-# Additional Considerations #
-// stateless-ness of this model. State of the client-interactions are managed on the client, and the server manages the persistence/state of the business domain
+* State or lack thereof
+* State of the client-interactions are managed on the client
+* Server manages the persistence/state of the business domain
