@@ -79,13 +79,24 @@
 # SproutCore in Three Acts#
 ![sc](../images/sproutcore.png)
 
-<!SLIDE >
-# Samples #
-// Three-ish samples
-// sample of Views
-// DataSource
-// Controller samples
-// Models (derived attributes / binding)
+<!SLIDE small>
+# Views #
+	@@@ javascript
+	// your js
+	App.UserView = SC.TemplateView.extend({
+	  templateName: 'user',
+ 
+	  firstNameBinding: 'App.userController.firstName',
+	  lastNameBinding: 'App.userController.lastName'
+	});
+	
+<br />
+
+	@@@ html
+	<!-- your handlebars template -->
+	<section class="user">
+		User: {{firstName}} {{lastName}}
+	</section>
 
 <!SLIDE>
 
