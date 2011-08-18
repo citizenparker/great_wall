@@ -83,20 +83,41 @@
 # Views #
 	@@@ javascript
 	// your js
-	App.UserView = SC.TemplateView.extend({
-	  templateName: 'user',
+	App.DogView = SC.TemplateView.extend({
+	  templateName: 'dogdetail',
  
-	  firstNameBinding: 'App.userController.firstName',
-	  lastNameBinding: 'App.userController.lastName'
+	  nameBinding: 'App.currentDogController.name',
+	  breedBinding: 'App.currentDogController.breed'
 	});
 	
-<br />
+<br><br>
 
 	@@@ html
-	<!-- your handlebars template -->
-	<section class="user">
-		User: {{firstName}} {{lastName}}
+	<!-- dogdetail.handlebars -->
+	<section class="dog">
+		{{name}} is a {{breed}}
 	</section>
+
+<!SLIDE small>
+# Controllers 
+
+	@@@ javascript
+	App.dogsController = SC.ArrayProxy.create({
+	  addCorgi: function(name) {
+	    var corgi = App.Dog.create({ 
+			name: name,
+			breed: 'Corgi'
+		});
+		
+	    this.pushObject(corgi);
+	  },
+	
+	  corgis: function() {
+	    return this.filterProperty('breed', corgi)
+			.get('length');
+
+	  }.property('@each.breed'),
+	});
 
 <!SLIDE>
 
