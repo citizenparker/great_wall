@@ -76,7 +76,7 @@
 ## Client-side MVC
 
 <!SLIDE center>
-# SproutCore in Three Acts#
+# Two Servings of SproutCore #
 ![sc](../images/sproutcore.png)
 
 <!SLIDE small>
@@ -105,9 +105,9 @@
 	App.dogsController = SC.ArrayProxy.create({
 	  addCorgi: function(name) {
 	    var corgi = App.Dog.create({ 
-			name: name,
-			breed: 'Corgi'
-		});
+				name: name,
+				breed: 'Corgi'
+			});
 		
 	    this.pushObject(corgi);
 	  },
@@ -125,18 +125,63 @@
 
 <!SLIDE center>
 
-# Backbone in Three Acts #
+# Two Bits of Backbone #
 
 ![sc](../images/backbone.png)
 
-<!SLIDE >
+<!SLIDE small>
 
-# Samples #
-// Three-ish samples
-// sample of Views
-// Routes
-// Collections
-// Models (derived attributes / binding)
+# Views
+
+	@@@ javascript
+	// your js
+	App.DogView = Backbone.View.extend({
+	  tagName: "li",
+	  template: _.template($('#dogdetail').html()),
+	  initialize: function() {
+	    this.model.bind('change', this.render);
+	  },
+	  render: function() {
+	    $(this.el).set('html', 
+	      this.template(this.model.toJSON()));
+	    this.setContent();
+	    return this;
+	  }
+	}
+
+<br><br>
+
+	@@@ html
+	<!-- in your html -->
+	<script type="text/template" id="dogdetail">
+	  <section class="dog">
+			<%= name %> is a <%= breed %>
+		</section>
+	</script>
+	
+<!SLIDE small>
+
+# Controllers
+
+	@@@ javascript
+	App.DogsCollection = Backbone.Collection.extend({
+		model: App.Dog,
+		
+		localStorage: new Store("dog"),
+		
+		addCorgi: function(name) {
+			this.add({breed: 'Corgi', name: name})
+			// any view that consumes this collection would
+			// need to bind their render() to the "add" event
+		},
+	
+		corgis: function() {
+			this.filter(function(dog){
+				return todo.get('breed') === 'Corgi'
+			}).length;
+		}
+	});
+
 
 <!SLIDE>
 
