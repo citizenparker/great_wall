@@ -51,4 +51,4 @@
 
 ## #5. Careless Deployments
 
-.notes deployment synchroniziation (open browsers and how they react?) - THESE PAGES AREN’T RELOADING THE JS ON-CLICK BRO.	
+.notes deployment synchronization (open browsers and how they react?) - THESE PAGES AREN’T RELOADING THE JS ON-CLICK BRO.	
